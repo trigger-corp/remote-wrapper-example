@@ -1,0 +1,50 @@
+{
+    "config_version": "4",
+    "name": "cognician",
+    "author": "antoine@trigger.io",
+    "version": "0.1",
+    "platform_version": "v2.5.1",
+    "description": "An empty app created by default",
+    "core": {
+        "android": {
+            "remote_debugging": true,
+            "package_name": "io.trigger.forge.android.inspector"
+        },
+        "general": {
+            "logging": {
+                "level": "DEBUG"
+            },
+            "trusted_urls": [
+                "http://chi.artifactual.org.za/*",
+                "http://localhost:31337/*"
+            ],
+            "reload": true
+        }
+    },
+    "modules": {
+        "httpd": {
+            "version": "0.4",
+            "config": {
+                "port": 31337,
+                "url": "http://chi.artifactual.org.za/cognician/src/index.html"
+            }
+        },
+        "parse": {
+            "version": "2.15",
+            "config": {
+                "server": "http://docker.trigger.io:1337/parse/",
+                "applicationId": "45732VjSzMiN8HN90ztWcSeEl05T92XUrE70MJgI",
+                "android": {
+                    "24": "icons/24.png",
+                    "36": "icons/36.png",
+                    "48": "icons/48.png",
+                    "72": "icons/72.png",
+                    "96": "icons/96.png",
+                    "notification_icon": "custom_push_icon",
+                    "background-color": "#5555ff",
+                    "GCMsenderID": "677378418801"
+                }
+            }
+        }
+    }
+}
